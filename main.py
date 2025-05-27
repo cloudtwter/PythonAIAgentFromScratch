@@ -17,6 +17,7 @@ class ResearchResponse(BaseModel):
     
 
 llm = ChatAnthropic(model="claude-3-5-sonnet-20241022")
+llm2 = ChatOpenAI(model="gpt-4o")
 parser = PydanticOutputParser(pydantic_object=ResearchResponse)
 
 prompt = ChatPromptTemplate.from_messages(
